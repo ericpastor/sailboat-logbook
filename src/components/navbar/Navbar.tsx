@@ -1,9 +1,10 @@
 import Links from "./links/Links";
+import styles from "./navbar.module.css"
 
 export default function Navbar() {
     return (
-        <div>
-            <h1>LOGO</h1>
+        <div className={styles.container}>
+            <div className={styles.logo}>LOGO</div>
             <div>
                 <Links />
             </div>
