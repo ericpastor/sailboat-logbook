@@ -1,0 +1,54 @@
+.container{
+    display: flex;
+    gap: 100px;
+    align-items: center;
+}
+
+.textContainer{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.title{
+    font-family: var(--font-mont);
+    font-size: 46px;
+    font-weight: 900;
+}
+
+.desc{
+    font-family: var(--font-mont);
+    font-size: 20px;
+    color: rgb(122, 134, 147);
+}
+
+.buttons{
+    display: flex;
+    gap: 20px;
+
+   
+}
+
+
+.button{
+    padding: 10px;
+    min-width: 120px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(127, 200, 255);
+    font-family: var(--font-mont);
+    font-weight: 500;
+    color: var(--bg);
+}
+
+.button:first-child{
+    background-color: var(--text);
+
+
+}
+.imageContainer{
+    flex: 0.5;
+    height: 400px;
+    position: relative;
+}
