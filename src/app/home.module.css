@@ -44,8 +44,6 @@
 
 .button:first-child{
     background-color: var(--text);
-
-
 }
 .imageContainer{
     flex: 0.5;
