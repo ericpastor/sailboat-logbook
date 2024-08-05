@@ -1,7 +1,8 @@
-import Link from "next/link"
+"use client"
 
 import styles from "./links.module.css"
 import NavLink from "./navLink/navLink"
+import { useState } from "react"
 
 export default function Links() {
     const links = [
@@ -26,11 +27,26 @@ export default function Links() {
             href: "/trips"
         },
     ]
+
+    const [open, setOpen] = useState(false)
+
     return (
-        <div className={styles.links}>
-            {links.map((link) => (
-                <NavLink item={link} key={link.name} />
-            ))}
+        <div className={styles.container}>
+
+            <div className={styles.links}>
+                {links.map((link) => (
+                    <NavLink item={link} key={link.name} />
+                ))}
+            </div>
+
+            <button className={styles.menuBtn} onClick={() => setOpen((prev) => !prev)}>Menu</button>
+
+
+            {open && (<div className={styles.mobileLinks}>
+                {links.map((link) => (
+                    <NavLink item={link} key={link.name} />
+                ))}
+            </div>)}
         </div>
     )
 }
