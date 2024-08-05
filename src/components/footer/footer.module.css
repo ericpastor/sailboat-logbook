@@ -6,6 +6,12 @@
     color:var(--textGray)
 
 }
+
+.text{
+    font-family: var(--font-ita);
+    font-size: 25px;
+}
+
 .logo{
     font-weight: bold;
 }
