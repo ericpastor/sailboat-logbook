@@ -1,0 +1,23 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.trip{
+    width: 30%;
+}
+
+@media screen and (max-width: 1280px) {
+    .trip{
+        width: 45%;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    .trip{
+        width: 100%;
+    }
+    
+}

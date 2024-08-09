@@ -1,4 +1,19 @@
-.imgContainer{
-    position:relative;
-    
+.container{
+    display: flex;
 }
+.specifications{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.specifications h1{
+    margin-bottom: 30px;
+}
+.imgContainer{
+    width: 30%;
+    position:relative;   
+}
+

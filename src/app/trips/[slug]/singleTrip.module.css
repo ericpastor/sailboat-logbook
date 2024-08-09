@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  gap: 30px;
+}
+
+.imgContainer {
+  flex: 0.9;
+  position: relative;
+  height: calc(100vh - 200px);
+}
+
+.textContainer {
+  flex: 2;
+  flex-direction: column;
+  height: calc(100vh - 200px);
+}
+
+.title {
+  display: flex;
+  font-size: 50px;
+  margin-bottom: 30px;
+  margin-top: -20px;
+}
+
+.detail {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 100px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
