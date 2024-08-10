@@ -17,19 +17,22 @@
 
 .title {
   display: flex;
-  font-size: 50px;
-  margin-bottom: 30px;
+  font-size: 45px;
+  margin-bottom: 10px;
   margin-top: -20px;
 }
 
 .detail {
   display: flex;
   flex-wrap: wrap;
-  gap: 100px;
+  gap: 50px;
 }
 
 .content {
   display: flex;
   flex-direction: column;
-  margin-top: 40px;
+  margin-top: 20px;
+}
+.content > p > span {
+  color: var(--textGray);
 }

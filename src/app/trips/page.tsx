@@ -1,7 +1,13 @@
 import TripCard from "@/components/tripCard/tripCard";
 import styles from "./trips.module.css"
-import { getAllTrips } from "@/lib/data";
+import { getAllTrips, getTrip } from "@/lib/data";
 import { TripDocument } from "@/types/trip";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Trips",
+    description: "All trips",
+};
 
 export default async function Trips() {
     const trips = await getAllTrips()

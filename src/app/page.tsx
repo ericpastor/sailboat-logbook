@@ -29,7 +29,7 @@ export default function Home() {
     <div data-test={"home-page"} className={styles.container}>
       <div className={styles.textContainer}>
         <div className={montserrat.variable}>
-          <h1 data-test="home-title" className={styles.title}>Keep your voyages details safe with Captain&apos;s Logbook</h1>
+          <h1 data-test="home-title" className={styles.title}>Keep your voyage details safe with the Captain&apos;s Logbook</h1>
           <p className={styles.desc}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis quo placeat omnis obcaecati iusto amet nisi, quae sit molestias dolorum expedita nihil impedit alias magnam repellat dolor quam? Quasi, sequi.</p>
         </div>
         <div className={styles.buttons}>
