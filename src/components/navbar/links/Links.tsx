@@ -26,6 +26,11 @@ export default function Links() {
             name: "Trips",
             href: "/trips"
         },
+        {
+            name: "Crew Members",
+            href: "/crew-members"
+        },
+
     ]
 
     const [open, setOpen] = useState(false)

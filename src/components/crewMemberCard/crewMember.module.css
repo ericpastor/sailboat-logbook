@@ -1,44 +1,64 @@
-.container {
+.card {
   display: flex;
   flex-direction: column;
   gap: 20px;
   margin-bottom: 25px;
+  border-radius: 10px;
   align-items: center;
+  justify-content: center;
+  background-color: var(--textSoft);
+  padding: 20px;
+  width: 300px;
+  text-align: center;
 }
 
 .top {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .imgContainer {
-  width: 50px;
-  height: 500px;
+  width: 75px;
+  height: 75px;
   position: relative;
+  border-radius: 50%;
+  margin-bottom: 5px;
+  border-color: var(--textSoft);
 }
 
 .img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-}
-
-.crewMemberTitle {
-  font-size: 24px;
-  margin-bottom: 20px;
+  border-radius: 50%;
+  background-color: var(--bgSoft);
+  color: var(--textGray);
+  border: 3px solid var(--bgSoft);
 }
 
 .crewMemberName {
   font-size: 24px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  color: var(--bgSoft);
+  font-weight: bold;
 }
 
 .rank,
 .experience {
-  width: 80%;
-  margin-bottom: 20px;
+  width: 100%;
   font-weight: 300;
   font-size: 15px;
+  color: var(--bgSoft);
+  font-weight: bold;
 }
 
 .rank,
 .experience > span {
   color: var(--textGray);
+}
+.btn {
+  color: var(--bgSoft);
+  font-weight: bold;
 }
