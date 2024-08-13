@@ -1,10 +1,11 @@
-.container{
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between ;
+.container {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-mont);
 }
-.logo{
-    font-size: 30px;
-    font-weight: 900;
+.logo {
+  font-size: 30px;
+  font-weight: 900;
 }

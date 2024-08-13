@@ -11,6 +11,10 @@ export default function Links() {
             href: "/"
         },
         {
+            name: "Register",
+            href: "/register"
+        },
+        {
             name: "Sailboat's data",
             href: "/sailboat-data"
         },
