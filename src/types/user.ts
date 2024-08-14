@@ -1,12 +1,11 @@
 export interface UserDocument extends Document {
-  userId: string
-  title: string
   name: string
   surname: string
   email: string
-  avatar: string
-  isCaptain: boolean
-  slug: string
+  phone: string
+  password: string
+  avatar?: string
+  rank: 'Owner' | 'Captain' | 'Officer' | 'Buson'
   createdAt: Date
   updatedAt?: Date
 }

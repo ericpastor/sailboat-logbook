@@ -1,3 +1,5 @@
+'use client'
+
 import { montserrat } from '@/app/fonts'
 import styles from './loginForm.module.css'
 import Link from 'next/link'

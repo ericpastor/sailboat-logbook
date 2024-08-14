@@ -5,13 +5,17 @@ import mongoose, { model, Schema } from 'mongoose'
 
 const userSchema: Schema = new Schema(
   {
-    userId: { type: String, required: true, unique: true },
     name: { type: String, required: true, min: 2, max: 20 },
     surname: { type: String, required: true, min: 2, max: 20 },
     email: { type: String, required: true, min: 6, max: 50 },
+    phone: { type: String, required: true, min: 6, max: 50 },
+    password: { type: String, required: true, min: 6, max: 50 },
     avatar: { type: String },
-    isCaptain: { type: Boolean, default: false },
-    slug: { type: String, required: true, unique: true },
+    rank: {
+      type: String,
+      enum: ['Owner', 'Captain', 'Officer', 'Buson'],
+      required: true,
+    },
   },
   { timestamps: true }
 )
