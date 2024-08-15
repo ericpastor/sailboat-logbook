@@ -32,7 +32,6 @@ export default function SignupForm() {
         }).then(res => res.json())
 
         try {
-
             const response = userRegisterSchema.safeParse(formData)
 
             if (!response.success) {
@@ -51,9 +50,8 @@ export default function SignupForm() {
         } finally {
             setIsLoading(false);
         }
-
-
     }
+
     return (
         <div className={montserrat.variable}>
             <section className={styles.container}>

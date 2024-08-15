@@ -9,3 +9,8 @@ export const userRegisterSchema = z.object({
   avatar: z.string(),
   rank: z.enum(['Owner', 'Captain', 'Officer', 'Buson']),
 })
+
+export const userLoginSchema = z.object({
+  email: z.string().email().min(6).max(30),
+  password: z.string().min(2).max(30),
+})

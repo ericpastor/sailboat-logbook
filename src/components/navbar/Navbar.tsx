@@ -5,6 +5,7 @@ import Image from "next/image";
 import { montserrat } from "@/app/fonts";
 
 export default function Navbar() {
+
     return (
         <div className={montserrat.variable}>
             <div className={styles.container}>

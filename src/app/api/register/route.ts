@@ -1,8 +1,7 @@
 import { User } from '@/lib/models'
-import crypto from 'node:crypto'
+import bcrypt from 'bcrypt'
 import { connectToDB } from '@/lib/utils'
 import { NextRequest, NextResponse } from 'next/server'
-import { STATUS_CODES } from 'node:http'
 
 export async function POST(req: NextRequest) {
   try {
@@ -19,10 +18,7 @@ export async function POST(req: NextRequest) {
       })
     }
 
-    const hashedPassword = crypto
-      .createHash('sha256')
-      .update(password)
-      .digest('hex')
+    const hashedPassword = await bcrypt.hash(password, 10)
 
     const newUser = await User.create({
       name,
