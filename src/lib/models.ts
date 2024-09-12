@@ -29,7 +29,6 @@ const crewMemberSchema: Schema = new Schema({
 
 const tripSchema: Schema = new Schema(
   {
-    tripId: { type: String, required: true, unique: true },
     title: { type: String, required: true },
     vesselName: { type: String, required: true },
     departurePort: { type: String, required: true },
@@ -58,7 +57,7 @@ const tripSchema: Schema = new Schema(
     vesselType: { type: String },
     fuelConsumption: { type: Number },
     pictures: { type: [String], default: [] },
-    slug: { type: String, required: true, unique: true },
+    slug: { type: String, unique: true },
   },
   { timestamps: true }
 )

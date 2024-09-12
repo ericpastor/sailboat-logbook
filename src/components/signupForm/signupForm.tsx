@@ -6,9 +6,10 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { userRegisterSchema } from '@/lib/validationModels'
 import { useRouter } from 'next/navigation'
+import { toast } from 'react-toastify'
 
 export default function SignupForm() {
-    const [errors, setErrors] = useState<any[]>([]);
+    const [errors, setErrors] = useState<any[]>([])
     const [isLoading, setIsLoading] = useState<boolean>(false);
 
     const router = useRouter()
@@ -43,9 +44,11 @@ export default function SignupForm() {
                 setErrors(errArr);
                 throw err;
             }
+            toast.success(`Hello ${formData.name}, login to start with Captain's Logbook`)
             router.push('/login')
             setErrors([]);
         } catch (error) {
+            toast.error('Something went wrong...')
             console.error(error);
         } finally {
             setIsLoading(false);

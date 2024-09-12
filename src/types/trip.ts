@@ -1,7 +1,6 @@
 import mongoose from 'mongoose'
 
 export interface TripDocument extends Document {
-  tripId: string
   title: string
   vesselName: string
   departurePort: string
@@ -20,7 +19,7 @@ export interface TripDocument extends Document {
   vesselType?: string
   fuelConsumption?: number
   pictures: string[]
-  slug: string
+  slug?: string
   createdAt: Date
   updatedAt?: Date
 }

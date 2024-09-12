@@ -33,6 +33,10 @@ export default function Links() {
             name: "Crew Members",
             href: "/crew-members"
         },
+        {
+            name: "New Trip",
+            href: "/create-trip"
+        },
 
     ]
 
@@ -80,7 +84,7 @@ export default function Links() {
                         <div className={styles.links}>
                             <div className={styles.item}><Link href="/register">Register</Link></div>
 
-                            <div className={styles.item}><Link href="/login">Login</Link></div>
+                            <div data-test='nav-login' className={styles.item}><Link href="/login">Login</Link></div>
                         </div>
                         <button className={styles.menuBtn} onClick={() => setOpen((prev) => !prev)}>
                             {open ? "✖" : "Menu"}

@@ -2,7 +2,6 @@ import { CrewMemberDocument } from "@/types/crewMember";
 import styles from './crewMembers.module.css'
 import { Metadata } from "next";
 import CrewMemberCard from "@/components/crewMemberCard/crewMemberCard";
-import { useRouter } from "next/navigation";
 
 export const metadata: Metadata = {
     title: "Crew Members",

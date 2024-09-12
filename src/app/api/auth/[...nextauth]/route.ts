@@ -9,7 +9,7 @@ import bcrypt from 'bcrypt'
 export const authOptions = {
   providers: [
     CredentialsProvider({
-      name: 'Credentials',
+      name: 'credentials',
       type: 'credentials',
       credentials: {},
       async authorize(credentials) {
@@ -28,13 +28,12 @@ export const authOptions = {
           }
 
           const passwordMatched = await bcrypt.compare(password, user.password)
-         
+
           if (!passwordMatched) {
             throw new Error('Wrong credentials!')
           } else {
-            const { password, ...currentUser } = user._doc
+            const { password, ...currentUser } = user
             const accessToken = signJwtToken(currentUser, { expiresIn: '1d' })
-           
 
             return {
               ...currentUser,
@@ -50,6 +49,7 @@ export const authOptions = {
   pages: {
     signIn: '/login',
   },
+
   secret: process.env.NEXTAUTH_SECRET,
   callbacks: {
     async jwt({ token, user }: { token: any; user: any }) {
@@ -61,8 +61,7 @@ export const authOptions = {
     },
     async session({ session, token }: { session: any; token: any }) {
       if (token) {
-        session.user._id = token._id
-        session.user.accesstoken = token.accessToken
+        session.user._id = token._id.user.accesstoken = token.accessToken
       }
       return session
     },
